@@ -1,4 +1,5 @@
-![127 0 0 1_5500_frontend_](https://github.com/user-attachments/assets/04586ba1-3b7f-441d-9f7a-ee35d1ac2b57)
+![Uploading 127.0.0.1_5500_frontend_ (1).png…]()
+
 
 
 # **BestDeals - Backend & Frontend**
