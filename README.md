@@ -1,5 +1,4 @@
-![127 0 0 1_5500_frontend_](https://github.com/user-attachments/assets/04586ba1-3b7f-441d-9f7a-ee35d1ac2b57)
-
+![Logo](/frontend/assets/images/logoBestDeal.png)
 
 # **BestDeals - Backend & Frontend**
 
@@ -10,6 +9,7 @@ Bienvenue sur **BestDeals**, un projet complet comprenant un **Backend API** sé
 ## **Technologies utilisées**
 
 ### Backend :
+
 - **Node.js** avec **Express**
 - **MongoDB** pour la base de données
 - **Cypress** pour les tests
@@ -18,6 +18,7 @@ Bienvenue sur **BestDeals**, un projet complet comprenant un **Backend API** sé
 - **JWT** pour une connexion sécurisée par Token
 
 ### Frontend :
+
 - **JavaScript** avec **npm** pour la gestion des dépendances
 - **HTML** / **CSS**
 
@@ -26,21 +27,22 @@ Bienvenue sur **BestDeals**, un projet complet comprenant un **Backend API** sé
 ## **Installation et lancement du projet**
 
 ### **Prérequis**
+
 - Avoir **Node.js** installé sur votre machine.
 - Installer **MongoDB** pour la base de données.
-
-
 
 # **BestDeals - Backend & Frontend**
 
 Bienvenue sur **BestDeals**, un projet complet comprenant un **Backend API** sécurisé et un **Frontend** fonctionnel développé avec **JavaScript**.
 
 ---
+
 ## **Installation et lancement du projet**
 
 ### **Prérequis**
+
 - Avoir **Node.js** installé sur votre machine. (Version 18.2)
-- La base de donnée est temporaire, pour utiliser le projet et vous l'approprier veuillez créer une nouvelle base de donnée et modifier les données de connection mongoose du fichier App.Js. 
+- La base de donnée est temporaire, pour utiliser le projet et vous l'approprier veuillez créer une nouvelle base de donnée et modifier les données de connection mongoose du fichier App.Js.
 - installer les modules avec NPM install et lancer le serveur avec Nodemon (Port 3000)
 - Pour le frontend NPM install et NPM run start
 
@@ -51,8 +53,10 @@ Bienvenue sur **BestDeals**, un projet complet comprenant un **Backend API** sé
 git clone https://github.com/zaaine/BestDeals.git
 cd BestDeals
 
-### Important ! 
+### Important !
 
-Ce projet a était réalisé pour la partie Backend a travers un module d'apprentisage de NodeJS, Cypress, MongoDB. Il n'a aucun but commercial et ne peux être monayer. 
-Les droits d'auteurs appartiennes à ZAAINE AZIZ et @OpenClassroom. La vocation du projet est de démontrer la maitrise de compétence a des fins professionnelles. 
+Ce projet a était réalisé pour la partie Backend a travers un module d'apprentisage de NodeJS, Cypress, MongoDB. Il n'a aucun but commercial et ne peux être monayer.
+Les droits d'auteurs appartiennes à ZAAINE AZIZ et @OpenClassroom. La vocation du projet est de démontrer la maitrise de compétence a des fins professionnelles.
 
+
+![Logo](/frontend/assets/screen%20website%20BestDeals2024.png)

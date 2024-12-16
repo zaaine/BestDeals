@@ -234,6 +234,13 @@ button {
   display: grid;
 }
 
+#edit-form {
+  display: grid;
+}
+
+.title-modal {
+  margin-left: 2rem !important;
+}
 /* formulaire */
 
 #signUpSubmit,
@@ -264,4 +271,10 @@ button {
 #open-add-product-modal,
 #loginSubmit:active {
   background-color: #119131;
+}
+
+section {
+  margin-bottom: 2rem;
+  display: grid;
+  justify-items: center;
 }
