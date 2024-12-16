@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestion des Produits</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <img
+          src="./assets/images/logoBestDeal.png "
+          alt="logoBestDeal"
+          class="logo"
+        />
+
+        <p>
+          Vendez vos objets en circuit court afin de leurs offrir une deuxième
+          vie .
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="log-site">
+        <nav>
+          <button class="log-button" id="go-to-signup">Inscription</button>
+          <button class="log-button" id="go-to-login" style="display: block">
+            Connexion
+          </button>
+
+          <button class="log-button" id="logout" style="display: none">
+            Déconnexion
+          </button>
+        </nav>
+      </section>
+
+      <aside class="log" id="form-signup" style="display: none">
+        <div class="signUpForm">
+          <form action="post" method="post" class="formulaire">
+            <h3>Incscription :</h3>
+            <label for="email"> Email : </label>
+            <br />
+            <input type="email" name="email" id="signUpEmail" required />
+            <br />
+            <label for="text"> Mot de passe : </label>
+            <br />
+            <input
+              type="password"
+              name="password"
+              id="signUpPassword"
+              required
+            />
+            <br />
+            <button type="submit" value="Envoyer" id="signUpSubmit">
+              Envoyer
+            </button>
+            <br />
+          </form>
+        </div>
+      </aside>
+
+      <aside class="log" id="form-login" style="display: none">
+        <div class="loginForm">
+          <form action="post" method="post" class="formulaire">
+            <h3>Connexion :</h3>
+            <label for="email"> Email : </label>
+            <br />
+            <input type="email" name="email" id="loginEmail" required />
+            <br />
+            <label for="text"> Mot de passe : </label>
+            <br />
+            <input type="text" name="password" id="loginPassword" required />
+            <br />
+            <button type="submit" value="Envoyer" id="loginSubmit">
+              Envoyer
+            </button>
+            <br />
+          </form>
+        </div>
+      </aside>
+
+      <section>
+        <div class="contenaire-produits"></div>
+        <h2>Galeries produits</h2>
+        <div id="galerie-produit">
+          <p>Connecter vous pour découvrir les produits en vente</p>
+        </div>
+      </section>
+
+      <section>
+        <!-- Bouton pour ouvrir la modale -->
+        <button id="open-add-product-modal" style="display: none">
+          Ajouter un produit
+        </button>
+
+        <!-- Formulaire modale pour ajouter un produit -->
+        <div id="add-product-modal" class="modal" style="display: none">
+          <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h3>Ajouter un produit</h3>
+            <form id="add-product-form" enctype="multipart/form-data">
+              <label for="product-title">Titre :</label>
+              <input type="text" id="product-title" required />
+
+              <label for="product-description">Description :</label>
+              <input type="text" id="product-description" required />
+
+              <label for="product-price">Prix :</label>
+              <input type="number" id="product-price" required />
+
+              <label for="product-image">Image :</label>
+              <input type="file" id="product-image" accept="image/*" required />
+
+              <button type="submit">Ajouter</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <!-- Modale pour Modifier/Supprimer un produit -->
+        <div id="modal" class="modal" style="display: none">
+          <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h3>Modifier ou Supprimer le produit</h3>
+            <form id="edit-form">
+              <label for="edit-title">Titre :</label>
+              <input type="text" id="edit-title" required />
+
+              <label for="edit-description">Description :</label>
+              <input type="text" id="edit-description" required />
+
+              <label for="edit-price">Prix :</label>
+              <input type="number" id="edit-price" required />
+
+              <label for="edit-image">Image :</label>
+              <input type="file" id="edit-image" />
+
+              <button type="submit" id="save-changes">Modifier</button>
+              <button type="button" id="delete-product">Supprimer</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer><p>&copy; 2024 BestDeals. Tous droits réservés.</p></footer>
+
+    <script src="api.js" type="module"></script>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
