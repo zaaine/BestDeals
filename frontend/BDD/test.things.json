@@ -1,0 +1,44 @@
+[{
+  "_id": {
+    "$oid": "67601bf8efed0673fa785971"
+  },
+  "title": "Micro-Ondes",
+  "description": "Bon état, plus sous garantie. REF :  2456A",
+  "imageUrl": "http://localhost:3000/images/MO.jpg1734351864752.jpg",
+  "userId": "67486b825f467862a9635428",
+  "price": 240,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67601c87efed0673fa785985"
+  },
+  "title": "TV LG",
+  "description": "Bon état, plus sous garantie. ref 245466A",
+  "imageUrl": "http://localhost:3000/images/LGTV.jpg1734352007265.jpg",
+  "userId": "67486b825f467862a9635428",
+  "price": 700,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "675c3522761893fb8e87ffd9"
+  },
+  "title": "TV Samsung UHD +",
+  "description": "TV uhd, 180cm. Etat Correct. REF 2345D",
+  "imageUrl": "http://localhost:3000/images/tv_samsung.png1734096162311.png",
+  "userId": "67486b825f467862a9635428",
+  "price": 350,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "675c3bd272803a0eb27e62b2"
+  },
+  "title": "Trotinette Power Z",
+  "description": "10h d'autonomie, acheté l'an dernier jamais utilisé. REF : 23456",
+  "imageUrl": "http://localhost:3000/images/trotinette2.jpg1734097874663.jpg",
+  "userId": "67486b825f467862a9635428",
+  "price": 580,
+  "__v": 0
+}]

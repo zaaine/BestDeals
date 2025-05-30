@@ -62,4 +62,6 @@ cd BestDeals
 Ce projet a était réalisé pour la partie Backend a travers un module d'apprentisage de NodeJS, Cypress, MongoDB. Il n'a aucun but commercial et ne peux être monayer.
 Les droits d'auteurs appartiennes à ZAAINE AZIZ et @OpenClassroom. La vocation du projet est de démontrer la maitrise de compétence a des fins professionnelles.
 
-![Screen](/frontend/assets/screen%20site%20BestDeals.png)
+![Screen](/frontend/assets/images/BestDeal_screen.png)
+![Screen](/frontend/assets/images/BestDeal_screen1.png)
+![Screen](/frontend/assets/images/BestDeal_screen2.png)
