@@ -59,8 +59,11 @@ cd BestDeals
 
 ### Important !
 
-Ce projet a était réalisé pour la partie Backend a travers un module d'apprentisage de NodeJS, Cypress, MongoDB. Il n'a aucun but commercial et ne peux être monayer.
-Les droits d'auteurs appartiennes à ZAAINE AZIZ et @OpenClassroom. La vocation du projet est de démontrer la maitrise de compétence a des fins professionnelles.
+Veuiller configurer dans le fichier app.js du dossier /backend votre adresse mongoose en local afin de créer les listes things et users dans une collection. Vous pouvez exporter une liste  things et users faite à l'avance du dossier BDD.
+
+user configuré :
+user:  test@test.com 
+password : test1234
 
 ![Screen](/frontend/assets/images/BestDeal_screen.png)
 ![Screen](/frontend/assets/images/BestDeal_screen1.png)
