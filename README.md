@@ -20,7 +20,7 @@ Bienvenue sur **BestDeals**, un projet complet comprenant un **Backend API** sé
 ### Frontend :
 
 - **JavaScript** avec **npm** pour la gestion des dépendances
-- **HTML** / **CSS**
+- **HTML** / **Tailwind**
 
 ---
 
