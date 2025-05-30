@@ -39,6 +39,10 @@ Bienvenue sur **BestDeals**, un projet complet comprenant un **Backend API** sé
 
 ## **Installation et lancement du projet**
 
+- la connection mongoose est situé dans le fichier app.js merci de l'adapter a votre lien local.
+- lancer le terminal sur le backend avec la commande npm install + npm run start.
+- lancer un deuxieme terminal sur le dossier frontend avec la commande npm install npm run start.
+
 ### **Prérequis**
 
 - Avoir **Node.js** installé sur votre machine. (Version 18.2)

@@ -4,149 +4,375 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gestion des Produits</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./src/output.css" />
   </head>
-  <body>
-    <header>
-      <div>
-        <img
-          src="./assets/images/logoBestDeal.png "
-          alt="logoBestDeal"
-          class="logo"
-        />
-
-        <p>
-          Vendez vos objets en circuit court afin de leurs offrir une deuxième
-          vie .
-        </p>
-      </div>
-    </header>
-
+  <body class="w-full max-w-none p-0 max-h-1/4 bg-gray-100">
     <main>
-      <section class="log-site">
-        <nav>
-          <button class="log-button" id="go-to-signup">Inscription</button>
-          <button class="log-button" id="go-to-login" style="display: block">
+      <header class="w-full p-0">
+        <div class="w-full max-h-[63vh] overflow-hidden bg-black">
+          <img
+            src="./assets/images/logoBestDeal.png"
+            alt="logoBestDeal"
+            class="w-full h-full object-cover object-bottom"
+          />
+        </div>
+
+        <div class="text-center bg-black text-white p-4">
+          <p class="text-2xl font-bold mx-auto max-w-[80%]">
+            Vendez vos objets en circuit court afin de leur offrir une deuxième
+            vie.
+          </p>
+        </div>
+      </header>
+
+      <section>
+        <nav
+          class="bg-red-500 text-white p-4 flex lg:flex-row sm:flex-col gap-2 lg:justify-around lg:mx-auto"
+        >
+          <button
+            class="rounded bg-white text-black py-3 px-6 font-semibold hover:text-green-300 transition lg:w-[25%]"
+            id="go-to-signup"
+          >
+            Inscription
+          </button>
+          <button
+            class="rounded bg-white text-black py-3 px-6 font-semibold hover:text-green-300 transition lg:w-[25%]"
+            id="go-to-login"
+          >
             Connexion
           </button>
 
-          <button class="log-button" id="logout" style="display: none">
+          <button
+            class="rounded bg-white text-black py-3 px-6 font-semibold hover:text-green-300 transition lg:w-[25%]"
+            id="logout"
+            style="display: none"
+          >
             Déconnexion
           </button>
         </nav>
       </section>
+    </main>
 
-      <aside class="log" id="form-signup" style="display: none">
-        <div class="signUpForm">
-          <form action="post" method="post" class="formulaire">
-            <h3>Incscription :</h3>
-            <label for="email"> Email : </label>
-            <br />
-            <input type="email" name="email" id="signUpEmail" required />
-            <br />
-            <label for="text"> Mot de passe : </label>
-            <br />
+    <!-- Formulaire d'inscription -->
+    <aside id="form-signup" class="mt-5">
+      <div
+        class="relative mx-auto w-full max-w-md transform rounded-lg bg-white p-6 shadow-xl transition-all"
+      >
+        <!-- Bouton de fermeture -->
+        <button
+          id="close-signup"
+          class="absolute right-4 top-4 text-2xl text-gray-500 hover:text-gray-700"
+        >
+          &times;
+        </button>
+
+        <form action="post" method="post" class="space-y-4">
+          <h3 class="text-center text-2xl font-bold text-gray-800">
+            Inscription
+          </h3>
+
+          <div class="space-y-4">
+            <div>
+              <label
+                for="signUpEmail"
+                class="mb-1 block text-sm font-medium text-gray-700"
+              >
+                Email :
+              </label>
+              <input
+                type="email"
+                id="signUpEmail"
+                required
+                class="w-full rounded-md border border-gray-300 px-4 py-2 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <div>
+              <label
+                for="signUpPassword"
+                class="mb-1 block text-sm font-medium text-gray-700"
+              >
+                Mot de passe :
+              </label>
+              <input
+                type="password"
+                id="signUpPassword"
+                required
+                class="w-full rounded-md border border-gray-300 px-4 py-2 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <button
+              type="submit"
+              id="signUpSubmit"
+              class="w-full rounded-md bg-blue-600 px-4 py-2 font-medium text-white transition duration-200 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            >
+              Envoyer
+            </button>
+          </div>
+        </form>
+      </div>
+    </aside>
+
+    <!-- Formulaire login -->
+    <aside class="log hidden" id="form-login">
+      <div class="loginForm max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
+        <form action="post" method="post" class="space-y-4">
+          <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">
+            Connexion
+          </h3>
+
+          <div class="space-y-2">
+            <label for="email" class="block text-sm font-medium text-gray-700"
+              >Email :</label
+            >
+            <input
+              type="email"
+              name="email"
+              id="loginEmail"
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              placeholder="votre@email.com"
+            />
+          </div>
+
+          <div class="space-y-2">
+            <label
+              for="password"
+              class="block text-sm font-medium text-gray-700"
+              >Mot de passe :</label
+            >
             <input
               type="password"
               name="password"
-              id="signUpPassword"
+              id="loginPassword"
               required
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              placeholder="••••••••"
             />
-            <br />
-            <button type="submit" value="Envoyer" id="signUpSubmit">
-              Envoyer
+          </div>
+
+          <button
+            type="submit"
+            id="loginSubmit"
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-200 ease-in-out transform hover:scale-105"
+          >
+            Se connecter
+          </button>
+        </form>
+      </div>
+    </aside>
+
+    <section>
+      <div class="contenaire-produits"></div>
+      <h2 class="text-center text-2xl font-bold m-5 lg:text-4xl">
+        Galeries produits
+      </h2>
+      <div id="galerie-produit">
+        <p>Connecter vous pour découvrir les produits en vente</p>
+      </div>
+    </section>
+
+    <section class="m-10">
+      <!-- Bouton pour ouvrir la modale -->
+      <button
+        id="open-add-product-modal"
+        style="display: none"
+        class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-200 ease-in-out transform hover:scale-105 flex mx-auto mb-4"
+      >
+        Ajouter un produit
+      </button>
+
+      <!-- Formulaire modale pour ajouter un produit -->
+      <div
+        id="add-product-modal"
+        class="modal fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-50"
+      >
+        <div
+          class="modal-content relative rounded-lg bg-white p-6 shadow-xl w-full max-w-md"
+        >
+          <span
+            id="close-modal"
+            class="close absolute top-4 right-4 cursor-pointer text-2xl font-bold text-gray-500 hover:text-gray-700"
+            >&times;</span
+          >
+
+          <h3 class="text-xl font-bold text-gray-800 mb-4">
+            Ajouter un produit
+          </h3>
+
+          <form
+            id="add-product-form"
+            enctype="multipart/form-data"
+            class="space-y-4"
+          >
+            <div class="form-group">
+              <label
+                for="product-title"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Titre :</label
+              >
+              <input
+                type="text"
+                id="product-title"
+                required
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <div class="form-group">
+              <label
+                for="product-description"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Description :</label
+              >
+              <input
+                type="text"
+                id="product-description"
+                required
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <div class="form-group">
+              <label
+                for="product-price"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Prix :</label
+              >
+              <input
+                type="number"
+                id="product-price"
+                required
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <div class="form-group">
+              <label
+                for="product-image"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Image :</label
+              >
+              <input
+                type="file"
+                id="product-image"
+                accept="image/*"
+                required
+                class="w-full file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+              />
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            >
+              Ajouter
             </button>
-            <br />
           </form>
         </div>
-      </aside>
+      </div>
+    </section>
 
-      <aside class="log" id="form-login" style="display: none">
-        <div class="loginForm">
-          <form action="post" method="post" class="formulaire">
-            <h3>Connexion :</h3>
-            <label for="email"> Email : </label>
-            <br />
-            <input type="email" name="email" id="loginEmail" required />
-            <br />
-            <label for="text"> Mot de passe : </label>
-            <br />
-            <input type="text" name="password" id="loginPassword" required />
-            <br />
-            <button type="submit" value="Envoyer" id="loginSubmit">
-              Envoyer
-            </button>
-            <br />
+    <section>
+      <!-- Modale pour Modifier/Supprimer un produit -->
+      <div
+        id="modal"
+        class="modal fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-50"
+      >
+        <div
+          class="modal-content relative rounded-lg bg-white p-6 shadow-xl w-full max-w-md mx-4"
+        >
+          <span
+            id="close-modal"
+            class="close absolute top-4 right-4 cursor-pointer text-2xl font-bold text-gray-500 hover:text-gray-700"
+            >&times;</span
+          >
+
+          <h3 class="title-modal text-xl font-bold text-gray-800 mb-4">
+            Modifier ou Supprimer le produit
+          </h3>
+
+          <form id="edit-form" class="space-y-4">
+            <div class="form-group">
+              <label
+                for="edit-title"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Titre :</label
+              >
+              <input
+                type="text"
+                id="edit-title"
+                required
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <div class="form-group">
+              <label
+                for="edit-description"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Description :</label
+              >
+              <input
+                type="text"
+                id="edit-description"
+                required
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <div class="form-group">
+              <label
+                for="edit-price"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Prix :</label
+              >
+              <input
+                type="number"
+                id="edit-price"
+                required
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <div class="form-group">
+              <label
+                for="edit-image"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Image :</label
+              >
+              <input
+                type="file"
+                id="edit-image"
+                class="w-full file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-gray-100 file:text-gray-700 hover:file:bg-gray-200"
+              />
+            </div>
+
+            <div class="flex space-x-3 pt-2">
+              <button
+                type="submit"
+                id="save-changes"
+                class="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              >
+                Modifier
+              </button>
+              <button
+                type="button"
+                id="delete-product"
+                class="flex-1 bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+              >
+                Supprimer
+              </button>
+            </div>
           </form>
         </div>
-      </aside>
+      </div>
+    </section>
 
-      <section>
-        <div class="contenaire-produits"></div>
-        <h2>Galeries produits</h2>
-        <div id="galerie-produit">
-          <p>Connecter vous pour découvrir les produits en vente</p>
-        </div>
-      </section>
-
-      <section>
-        <!-- Bouton pour ouvrir la modale -->
-        <button id="open-add-product-modal" style="display: none">
-          Ajouter un produit
-        </button>
-
-        <!-- Formulaire modale pour ajouter un produit -->
-        <div id="add-product-modal" class="modal" style="display: none">
-          <div class="modal-content">
-            <span id="close-modal" class="close">&times;</span>
-            <h3>Ajouter un produit</h3>
-            <form id="add-product-form" enctype="multipart/form-data">
-              <label for="product-title">Titre :</label>
-              <input type="text" id="product-title" required />
-
-              <label for="product-description">Description :</label>
-              <input type="text" id="product-description" required />
-
-              <label for="product-price">Prix :</label>
-              <input type="number" id="product-price" required />
-
-              <label for="product-image">Image :</label>
-              <input type="file" id="product-image" accept="image/*" required />
-
-              <button type="submit">Ajouter</button>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <!-- Modale pour Modifier/Supprimer un produit -->
-        <div id="modal" class="modal" style="display: none">
-          <div class="modal-content">
-            <span id="close-modal" class="close">&times;</span>
-            <h3 class="title-modal">Modifier ou Supprimer le produit</h3>
-            <form id="edit-form">
-              <label for="edit-title">Titre :</label>
-              <input type="text" id="edit-title" required />
-
-              <label for="edit-description">Description :</label>
-              <input type="text" id="edit-description" required />
-
-              <label for="edit-price">Prix :</label>
-              <input type="number" id="edit-price" required />
-
-              <label for="edit-image">Image :</label>
-              <input type="file" id="edit-image" />
-
-              <button type="submit" id="save-changes">Modifier</button>
-              <button type="button" id="delete-product">Supprimer</button>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer><p>&copy; 2024 BestDeals. Tous droits réservés.</p></footer>
+    <footer class="bg-black text-white text-center py-4">
+      <p>&copy; 2024 BestDeals. Tous droits réservés.</p>
+    </footer>
 
     <script src="api.js" type="module"></script>
     <script src="script.js" type="module"></script>

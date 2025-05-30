@@ -10,7 +10,7 @@ const userRoutes = require("./routes/user");
 
 mongoose
   .connect(
-    "mongodb+srv://aziz:aziz1234@bestdeal.uykyh.mongodb.net/?retryWrites=true&w=majority&appName=bestdeal"
+    "mongodb://localhost:27017/test" // Remplacez par votre URL de connexion MongoDB locale
   )
   .then(() => console.log("Connexion à MongoDB réussie !"))
   .catch((error) => console.error("Erreur de connexion à MongoDB :", error));

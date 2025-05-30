@@ -61,37 +61,50 @@ loginSubmit.addEventListener("click", async (event) => {
 ************************************************** */
 
 const galerie = document.getElementById("galerie-produit");
-const products = localStorage.getItem("Things");
+const products = JSON.parse(localStorage.getItem("Things")) || [];
 
 function showGallery(products) {
   galerie.innerHTML = "";
   products.forEach((product) => {
     const productCard = document.createElement("article");
-    productCard.className = "card";
+    productCard.className =
+      "card bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1";
     productCard.setAttribute("id", product._id);
 
-    const productTitle = document.createElement("h3");
-    const productDescription = document.createElement("p");
-    const productPrice = document.createElement("p");
     const productImage = document.createElement("img");
     productImage.src = product.imageUrl;
-
     productImage.alt = product.title;
-    productImage.className = "card-image";
+    productImage.className = "w-full h-48 object-cover";
+
+    const cardBody = document.createElement("div");
+    cardBody.className = "p-4";
+
+    const productTitle = document.createElement("h3");
     productTitle.textContent = product.title;
-    productTitle.className = "card-title";
+    productTitle.className =
+      "text-lg font-semibold text-gray-800 mb-1 truncate";
+
+    const productDescription = document.createElement("p");
     productDescription.textContent = product.description;
-    productDescription.className = "card-description";
+    productDescription.className = "text-gray-600 text-sm mb-2 line-clamp-2";
+
+    const productPrice = document.createElement("p");
     productPrice.textContent = `${product.price}€`;
-    productPrice.className = "card-price";
+    productPrice.className = "text-lg font-bold text-blue-600";
+
+    cardBody.appendChild(productTitle);
+    cardBody.appendChild(productDescription);
+    cardBody.appendChild(productPrice);
 
     productCard.appendChild(productImage);
-    productCard.appendChild(productTitle);
-    productCard.appendChild(productDescription);
-    productCard.appendChild(productPrice);
+    productCard.appendChild(cardBody);
+
     galerie.appendChild(productCard);
   });
 }
+
+galerie.className =
+  "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4";
 
 /*********************************************************** */
 // Chargement de la liste des produits pour affichage
